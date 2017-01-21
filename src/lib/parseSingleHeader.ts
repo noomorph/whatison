@@ -1,14 +1,4 @@
-export type SoftwareName =
-    'php' | 'ruby' | 'asp' | 'java' | 'node' | 'wix';
-
-export interface ISoftwareTag {
-    name: SoftwareName;
-    version?: string;
-}
-
-export interface IWhatisonResult {
-    software: ISoftwareTag[];
-}
+import { IWhatisonResult, ISoftwareTag } from './core';
 
 function isPoweredBy(header: string): boolean {
     return header.indexOf('powered-by') >= 0;

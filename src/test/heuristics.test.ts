@@ -4,7 +4,8 @@ import * as readline from 'readline';
 import * as _ from 'lodash';
 import test, {CallbackTest, CallbackTestContext} from 'ava';
 
-import { parseSingleHeader, IWhatisonResult } from '../lib/parseSingleHeader';
+import { IWhatisonResult } from '../lib/core';
+import { parseSingleHeader } from '../lib/parseSingleHeader';
 
 interface IHeuristicLimit {
     min: number;

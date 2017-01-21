@@ -1,5 +1,6 @@
 import test, { Macro, AssertContext } from 'ava';
-import { IWhatisonResult, parseSingleHeader } from '../lib/parseSingleHeader';
+import { IWhatisonResult } from '../lib/core';
+import { parseSingleHeader } from '../lib/parseSingleHeader';
 
 type CallInput = [string, string];
 

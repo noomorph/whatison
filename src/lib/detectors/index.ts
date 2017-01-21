@@ -1,0 +1,1 @@
+export { PHPDetector } from './PHPDetector';
