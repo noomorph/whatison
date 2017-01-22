@@ -1,1 +1,3 @@
-export { PHPDetector } from './PHPDetector';
+export { PoweredByDetector } from './PoweredByDetector';
+export { SpecificHeadersDetector } from './SpecificHeadersDetector';
+export { AggregateDetector } from './AggregateDetector';

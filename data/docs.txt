@@ -1,0 +1,42 @@
+# Server/Powered regex
+
+* /^(x-)?(\w+-?)?server\d?$/
+* /^(x-)?(\w+[- ]?)?powered\b/
+
+# Header needs analysis:
+
+* "powered by"
+* "powered-by"
+* "x-cf-powered-by"
+* "x-cms-powered-by"
+* "x-powered-by"
+* "x-powered-by-cms"
+* "x-powered-cms"
+* "server2"
+* "server"
+* "x-bs-server"
+* "x-original-server"
+* "x-server"
+* "x-upstream-server"
+
+Specific headers:
+
+* "microsoftofficewebserver" => microsoft web server
+* "commerce-server-software" => microsoft commerce server
+* "x-wix-renderer-server" ===> wix
+* "a-powered-by" ===> maybe: abo.cms
+* "b-powered-by" ===> maybe: bitrix
+* "x-php-powered-by" ===> maybe: php
+* /apache.?server/ ===> apache
+* /nginx.?server/ ===> nginx
+* /iis.?server/ ===> iis
+
+Cookie:
+
+
+
+{
+    inspectAllHeaders: false
+}
+
+

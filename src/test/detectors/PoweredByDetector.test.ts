@@ -1,21 +1,38 @@
 import test, { Macro, AssertContext } from 'ava';
-import { PHPDetector } from '../../lib/detectors';
+import { Detector } from '../../lib/core';
+import { core, detectors } from '../../lib';
 
-test('.detected should be false on creation', t => {
-    t.false((new PHPDetector()).detected);
+let detector: Detector;
+
+test.before(() => {
+    const factory = new core.DetectorFactory({
+        verbose: false,
+        scanAllHeaders: false
+    });
+
+    detector = factory.instantiate(detectors.PoweredByDetector);
 });
 
 const detect_php_version: Macro<AssertContext> = function detect_php_version(t, rawHeader, expectedVersion) {
     const [givenHeader, ...givenValues] = rawHeader.toLowerCase().split(':');
     const [lang, l_expectedVersion] = expectedVersion.toLowerCase().split('/');
 
-    const detector = new PHPDetector();
-    detector.parseHeader(givenHeader, givenValues.join(':'));
+    const header = core.HTTPHeader.parse(rawHeader);
+    const result = detector.scan(header);
 
-    t.is(detector.detected, lang === 'php', 'could not detect PHP language');
-    t.not(detector.versions.length, 0, 'could not detect PHP version');
-    t.is(detector.versions.length, 1, 'found too many versions of PHP');
-    t.is(detector.versions[0].toString(), l_expectedVersion, 'incorrectly parsed version of PHP');
+    t.is(result, null, 'could not detect anything');
+
+    if (result) {
+        t.not(result.tags.length, 0, 'could not detect PHP version');
+        t.is(result.tags.length, 1, 'found too many versions of PHP');
+        t.not(result.tags[0].version, undefined, 'could not ascertain version of PHP');
+
+        const version = result.tags[0].version;
+
+        if (version) {
+            t.is(version.toString(), l_expectedVersion, 'incorrectly parsed version of PHP');
+        }
+    }
 }
 
 detect_php_version.title = (title = '', header, version) => `${title}should detect ${version} when given ${header.slice(0)}...`;
