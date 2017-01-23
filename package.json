@@ -4,7 +4,8 @@
   "description": "Heuristic parser of HTTP response headers that tries to guess the technology stack being used on the server",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run compile && npm test",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && npm run compile && npm test",
     "compile": "tsc",
     "test": "ava"
   },
