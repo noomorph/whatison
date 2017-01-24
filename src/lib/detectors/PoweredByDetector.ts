@@ -39,7 +39,12 @@ export class PoweredByDetector extends Detector {
             if (POWERED_MATCH.test(name)) {
                 return true;
             }
+
+            if (header.lowerValue.indexOf('powered') >= 0) {
+                return true;
+            }
         }
+
 
         return false;
     }
@@ -48,7 +53,7 @@ export class PoweredByDetector extends Detector {
         const match = PHP_REGEX.exec(header.lowerValue);
 
         if (match) {
-            const tag = new SoftwareTag('php', new SemanticVersion(match[1]));
+            const tag = new SoftwareTag('php', SemanticVersion.parse(match[1]));
             return new DetectionResult([tag]);
         }
 

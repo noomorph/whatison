@@ -1,43 +1,35 @@
-import test, { Macro, AssertContext } from 'ava';
-import { Detector } from '../../lib/core';
-import { core, detectors } from '../../lib';
+import test from 'ava';
+import { SoftwareTag, SemanticVersion } from '../../lib/core';
+import generate_detect_multi_versions_macro from "../macros/detect_multi_versions";
+import generate_detect_php_version_macro from "../macros/detect_php_version";
 
-let detector: Detector;
-
-test.before(() => {
-    const factory = new core.DetectorFactory({
-        verbose: false,
-        scanAllHeaders: false
-    });
-
-    detector = factory.instantiate(detectors.PoweredByDetector);
+const detect_multi_versions = generate_detect_multi_versions_macro({
+    verbose: true,
+    scanAllHeaders: false
 });
 
-const detect_php_version: Macro<AssertContext> = function detect_php_version(t, rawHeader, expectedVersion) {
-    const [givenHeader, ...givenValues] = rawHeader.toLowerCase().split(':');
-    const [lang, l_expectedVersion] = expectedVersion.toLowerCase().split('/');
+const detect_php_version = generate_detect_php_version_macro({
+    verbose: true,
+    scanAllHeaders: true
+});
 
-    const header = core.HTTPHeader.parse(rawHeader);
-    const result = detector.scan(header);
+test(detect_multi_versions, 'server:apache/2.2.9 (debian) mod_fastcgi/2.4.6 php/5.2.6-1+lenny9 with suhosin-patch mod_python/3.3.1 python/2.5.2 mod_ruby/1.2.6 ruby/1.8.7(2008-08-11) mod_ssl/2.2.9 openssl/0.9.8g phusion_passenger/3.0.11 mod_perl/2.0.4 perl/v5.10.0', [
+     new SoftwareTag('apache', new SemanticVersion(2, 2, 9, '')),
+     new SoftwareTag('debian'),
+     new SoftwareTag('mod_fastcgi', new SemanticVersion(2, 4, 6, '')),
+     new SoftwareTag('php', new SemanticVersion(5, 2, 6, '-1+lenny9 with suhosin-patch')),
+     new SoftwareTag('mod_python', new SemanticVersion(3, 3, 1, '')),
+     new SoftwareTag('python', new SemanticVersion(2, 5, 2, '')),
+     new SoftwareTag('mod_ruby', new SemanticVersion(1, 2, 6, '')),
+     new SoftwareTag('ruby', new SemanticVersion(1, 8, 7, '(2008-08-11)')),
+     new SoftwareTag('mod_ssl', new SemanticVersion(2, 2, 9, '')),
+     new SoftwareTag('openssl', new SemanticVersion(0, 9, 8, 'g')),
+     new SoftwareTag('phusion_passenger', new SemanticVersion(3, 0, 11, '')),
+     new SoftwareTag('mod_perl', new SemanticVersion(2, 0, 4, '')),
+     new SoftwareTag('perl', new SemanticVersion(5, 10, 0, ''))
+]);
 
-    t.not(result, null, 'could not detect anything');
-
-    if (result) {
-        t.not(result.tags.length, 0, 'could not detect PHP version');
-        t.is(result.tags.length, 1, 'found too many versions of PHP');
-        t.not(result.tags[0].version, undefined, 'could not ascertain version of PHP');
-
-        const version = result.tags[0].version;
-
-        if (version) {
-            t.is(version.toString(), l_expectedVersion, 'incorrectly parsed version of PHP');
-        }
-    }
-}
-
-detect_php_version.title = (title = '', header, version) => `${title}should detect ${version} when given ${header.slice(0)}...`;
-
-test.skip(detect_php_version, '0: X-Powered-By: PHP/5.4.21', 'PHP/5.4.21');
+test(detect_php_version, '0: X-Powered-By: PHP/5.4.21', 'PHP/5.4.21');
 test(detect_php_version, 'Server: Apache-AdvancedExtranetServer/1.3.33 (Mandrakelinux/4mdk.i1) FrontPage/5.0.2.2635 mod_throttle/3.1.2 mod_ssl/2.8.22 OpenSSL/0.9.7d PHP/4.3.10', 'PHP/4.3.10');
 test(detect_php_version, 'Server: Apache/1.3.22 (Win32) tomcat/1.0 PHP/5.2.8', 'PHP/5.2.8');
 test(detect_php_version, 'Server: Apache/1.3.23 (Unix) mod_watch/3.17 mod_ssl/2.8.6 OpenSSL/0.9.6b PHP/4.2.1 AuthMySQL/2.20 mod_gzip/1.3.19.1a mod_fastcgi/2.2.10 FrontPage/5.0.2.2510 mod_perl/1.26', 'PHP/4.2.1');

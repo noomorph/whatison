@@ -2,31 +2,13 @@ import { Version } from './Version';
 
 export class SemanticVersion implements Version {
     private raw: string;
-    private major: number;
-    private minor: number;
-    private patch: number;
-    private metadata: string;
 
-    constructor(version: string = '') {
-        this.raw = version;
-
-        const [numbers = '', ...metadata] = version.split('-');
-        const [major, minor, patch] = numbers.split('.');
-
-        this.major = Number(major);
-        this.minor = Number(minor);
-        this.patch = parseInt(patch, 10);
-
-        if (isNaN(Number(patch)) && isFinite(this.patch)) {
-            this.metadata = patch.replace(/^\d+/g, '');
-        } else {
-            this.metadata = '';
-        }
-
-        if (metadata.length > 0) {
-            this.metadata += '-' + metadata.join('-');
-        }
-    }
+    constructor(
+        public major: number = NaN,
+        public minor: number = NaN,
+        public patch: number = NaN,
+        public metadata: string = ''
+    ) {}
 
     public isValid(): boolean {
         return !isNaN(this.major);
@@ -77,5 +59,30 @@ export class SemanticVersion implements Version {
         }
 
         return a.metadata.localeCompare(b.metadata); // TODO: implement full-featured metadata comparison
+    }
+
+    public static parse(version: string = ''): SemanticVersion {
+        const [numbers = '', ...saMetadata] = version.trim().split('-');
+        const [sMajor = '', sMinor = '', sPatch = ''] = numbers.split('.');
+
+        const major: number = parseInt(sMajor[0] === 'v' ? sMajor.slice(1) : sMajor);
+        const minor: number = parseInt(sMinor, 10);
+        const patch: number = parseInt(sPatch, 10);
+
+        let metadata: string;
+        if (isNaN(Number(sPatch)) && isFinite(patch)) {
+            metadata = sPatch.replace(/^\d+/g, '');
+        } else {
+            metadata = '';
+        }
+
+        if (saMetadata.length > 0) {
+            metadata += '-' + saMetadata.join('-');
+        }
+
+        const result = new SemanticVersion(major, minor, patch, metadata);
+        result.raw = version;
+
+        return result;
     }
 }
