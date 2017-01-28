@@ -1,0 +1,2875 @@
+{
+    "apps": {
+        "1C-Bitrix": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "BITRIX_",
+                "X-Powered-CMS": "Bitrix Site Manager"
+            },
+            "implies": "PHP"
+        },
+        "3dCart": {
+            "cats": [
+                1,
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "3dvisit",
+                "X-Powered-By": "3DCART"
+            }
+        },
+        "3ware": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "3ware\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "AMPcms": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "^AMP=",
+                "X-AMP-Version": "([\\d.]+)\\;version:\\1"
+            },
+            "implies": "PHP"
+        },
+        "AOLserver": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "AOLserver/?([\\d.]+)?\\;version:\\1"
+            }
+        },
+        "ATEN": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "ATEN HTTP Server(?:\\(?V?([\\d\\.]+)\\)?)?\\;version:\\1"
+            }
+        },
+        "Adobe ColdFusion": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Cookie": "CFTOKEN="
+            },
+            "implies": "CFML",
+            "url": "\\.cfm(?:$|\\?)"
+        },
+        "Aegea": {
+            "cats": [
+                11
+            ],
+            "headers": {
+                "X-Powered-By": "^E2 Aegea v(\\d+)$\\;version:\\1"
+            },
+            "implies": [
+                "PHP",
+                "jQuery"
+            ]
+        },
+        "Airee": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "Airee"
+            }
+        },
+        "Akamai": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "X-Akamai-Transformed": ""
+            }
+        },
+        "Akka HTTP": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Server": "akka-http(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Allegro RomPager": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Allegro-Software-RomPager(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Apache": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "(?:Apache(?:$|/([\\d.]+)|[^/-])|(?:^|\b)HTTPD)\\;version:\\1"
+            }
+        },
+        "Apache Tomcat": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Apache-Coyote(/1\\.1)?\\;version:\\1?4.1+:",
+                "X-Powered-By": "\bTomcat\b(?:-([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Apache Traffic Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "ATS/?([\\d.]+)?\\;version:\\1"
+            }
+        },
+        "Arastta": {
+            "cats": [
+                6
+            ],
+            "excludes": "OpenCart",
+            "headers": {
+                "Arastta": "(.*)\\;version:\\1",
+                "X-Arastta": ""
+            },
+            "implies": "PHP"
+        },
+        "Artifactory Web Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Artifactory(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Artifactory"
+            ]
+        },
+        "ArvanCloud": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "AR-PoweredBy": "Arvan Cloud \\(arvancloud.com\\)"
+            }
+        },
+        "Asymptix PHP Framework": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Asymptix PHP Framework(?:.*)"
+            },
+            "implies": [
+                "PHP"
+            ]
+        },
+        "Atlassian Confluence": {
+            "cats": [
+                8
+            ],
+            "headers": {
+                "X-Confluence-Request-Time": ""
+            },
+            "implies": "Java"
+        },
+        "Atlassian FishEye": {
+            "cats": [
+                47
+            ],
+            "headers": {
+                "Set-cookie": "FESESSIONID"
+            }
+        },
+        "BaseHTTP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "BaseHTTP\\/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Python"
+        },
+        "Bigware": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "(?:bigwareCsid|bigWAdminID)"
+            },
+            "implies": "PHP",
+            "url": "(?:\\?|&)bigWAdminID="
+        },
+        "Blesta": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "blesta_sid"
+            }
+        },
+        "Boa": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Boa\\/?([\\d\\.a-z]+)?\\;version:\\1"
+            }
+        },
+        "Bonfire": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "bf_session="
+            },
+            "implies": "CodeIgniter"
+        },
+        "CMS Made Simple": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "^CMSSESSID"
+            },
+            "implies": "PHP"
+        },
+        "CPG Dragonfly": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "Dragonfly CMS"
+            },
+            "implies": "PHP"
+        },
+        "CacheFly": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "^CFS ",
+                "X-CF1": "",
+                "X-CF2": ""
+            }
+        },
+        "Caddy": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^Caddy$"
+            }
+        },
+        "CakePHP": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "cakephp="
+            },
+            "implies": "PHP"
+        },
+        "Canon HTTP Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "CANON HTTP Server(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Canon"
+            ]
+        },
+        "Catberry.js": {
+            "cats": [
+                12,
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Catberry"
+            },
+            "implies": "Node.js"
+        },
+        "Catwalk": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Catwalk\\/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Canon"
+        },
+        "CentOS": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "CentOS",
+                "X-Powered-By": "CentOS"
+            }
+        },
+        "CenteHTTPd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "CenteHTTPd(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Chamilo": {
+            "cats": [
+                21
+            ],
+            "headers": {
+                "X-Powered-By": "Chamilo ([\\d.]+)\\;version:\\1"
+            },
+            "implies": "PHP"
+        },
+        "Cherokee": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Cherokee/([\\d.]+)\\;version:\\1"
+            }
+        },
+        "CherryPy": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Server": "CherryPy\\/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Python"
+        },
+        "Ckan": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Access-Control-Allow-Headers": "X-CKAN-API-KEY",
+                "Link": "<http://ckan.org/>; rel=shortlink"
+            },
+            "implies": [
+                "Python",
+                "Solr",
+                "Java",
+                "PostgreSQL\\;confidence:80"
+            ]
+        },
+        "CloudFlare": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "cloudflare"
+            }
+        },
+        "Cloudera": {
+            "cats": [
+                34
+            ],
+            "headers": {
+                "Server": "cloudera"
+            }
+        },
+        "CodeIgniter": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "(?:exp_last_activity|exp_tracker|ci_(?:session|(csrf_token)))\\;version:\\1?2+:"
+            },
+            "implies": "PHP"
+        },
+        "Commerce Server": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "COMMERCE-SERVER-SOFTWARE": ""
+            },
+            "implies": "Microsoft ASP.NET"
+        },
+        "CompaqHTTPServer": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "CompaqHTTPServer\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Connect": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "^Connect$"
+            },
+            "implies": "Node.js"
+        },
+        "CouchDB": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "CouchDB/([\\d.]+)\\;version:\\1"
+            }
+        },
+        "Cowboy": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Server": "Cowboy"
+            },
+            "implies": "Erlang"
+        },
+        "CppCMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "CppCMS/([\\d.]+)\\;version:\\1"
+            },
+            "implies": "C++"
+        },
+        "Craft CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "CraftSessionId=",
+                "X-Powered-By": "Craft CMS"
+            },
+            "implies": "PHP"
+        },
+        "DNN": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Cookie": "dnn_IsMobile=",
+                "DNNOutputCache": "",
+                "Set-Cookie": "DotNetNukeAnonymous=",
+                "X-Compressed-By": "DotNetNuke"
+            },
+            "implies": "Microsoft ASP.NET"
+        },
+        "Dancer": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Server": "Perl Dancer ([\\d.]+)\\;version:\\1",
+                "X-Powered-By": "Perl Dancer ([\\d.]+)\\;version:\\1"
+            },
+            "implies": "Perl"
+        },
+        "Danneo CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "CMS Danneo ([\\d.]+)\\;version:\\1"
+            },
+            "implies": [
+                "Apache",
+                "PHP"
+            ]
+        },
+        "Darwin": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Darwin",
+                "X-Powered-By": "Darwin"
+            }
+        },
+        "David Webbox": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "David-WebBox/([\\d.a]+ \\(\\d+\\))\\;version:\\1"
+            }
+        },
+        "Debian": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Debian",
+                "X-Powered-By": "(?:Debian|dotdeb|(sarge|etch|lenny|squeeze|wheezy|jessie))\\;version:\\1"
+            }
+        },
+        "Decorum": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "DECORUM(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Demandware": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Server": "Demandware eCommerce Server"
+            }
+        },
+        "DirectAdmin": {
+            "cats": [
+                9
+            ],
+            "headers": {
+                "Server": "DirectAdmin Daemon v([\\d.]+)\\;version:\\1"
+            },
+            "implies": [
+                "PHP",
+                "Apache"
+            ]
+        },
+        "Dokeos": {
+            "cats": [
+                21
+            ],
+            "headers": {
+                "X-Powered-By": "Dokeos"
+            },
+            "implies": [
+                "PHP",
+                "Xajax",
+                "jQuery",
+                "CKEditor"
+            ]
+        },
+        "DokuWiki": {
+            "cats": [
+                8
+            ],
+            "headers": {
+                "Set-Cookie": "DokuWiki="
+            },
+            "implies": "PHP"
+        },
+        "Drupal": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Expires": "19 Nov 1978",
+                "X-Drupal-Cache": "",
+                "X-Generator": "Drupal(?:\\s([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "PHP"
+        },
+        "Dynamicweb": {
+            "cats": [
+                1,
+                6,
+                10
+            ],
+            "headers": {
+                "Set-Cookie": "Dynamicweb="
+            },
+            "implies": "Microsoft ASP.NET"
+        },
+        "ELOG HTTP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "ELOG HTTP( \\d[\\-\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "ELOG"
+        },
+        "EPages": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-Powered-By": "epages 6"
+            }
+        },
+        "EPiServer": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "EPi(?:Trace|Server)[^;]*="
+            },
+            "implies": "Microsoft ASP.NET"
+        },
+        "ESERV-10": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "ESERV-10(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "EWS-NIC4": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "EWS-NIC4(?:\\/([\\d\\.a-z]+))?\\;version:\\1"
+            },
+            "implies": "Dell"
+        },
+        "EdgeCast": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "^EC(?:S|Acc)"
+            },
+            "url": "https?://(?:[^/]+\\.)?edgecastcdn\\.net/"
+        },
+        "Elcodi": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-Elcodi": ""
+            },
+            "implies": [
+                "PHP",
+                "Symfony"
+            ]
+        },
+        "EmbedThis Appweb": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Mbedthis-Appweb(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Embedthis-http": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Embedthis-http(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Erlang": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Server": "Erlang( OTP/(?:[\\-\\d\\.ABR]+))?\\;version:\\1"
+            }
+        },
+        "Exagon Concept": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Server": "Exagon Server"
+            }
+        },
+        "Express": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "^Express$"
+            },
+            "implies": "Node.js"
+        },
+        "ExpressionEngine": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "(?:exp_last_activity|exp_tracker)"
+            },
+            "implies": "PHP"
+        },
+        "Fat-Free Framework": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Fat-Free Framework"
+            },
+            "implies": "PHP"
+        },
+        "Fedora": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Fedora"
+            }
+        },
+        "Fireblade": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "fbs"
+            }
+        },
+        "FlashCom": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "FlashCom/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Flask": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Server": "Werkzeug/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Python"
+        },
+        "FlexCMP": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Flex-Lang": "",
+                "X-Powered-By": "FlexCMP.+\\[v\\. ([\\d.]+)\\;version:\\1"
+            }
+        },
+        "Flyspray": {
+            "cats": [
+                13
+            ],
+            "headers": {
+                "Set-Cookie": "flyspray_project="
+            }
+        },
+        "FreeBSD": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "FreeBSD(?: ([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "G-WAN": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "G-WAN"
+            }
+        },
+        "Gauges": {
+            "cats": [
+                10
+            ],
+            "headers": {
+                "Set-Cookie": "_gauges_[^;]+="
+            }
+        },
+        "Gentoo": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "X-Powered-By": "gentoo"
+            }
+        },
+        "Ghost": {
+            "cats": [
+                11
+            ],
+            "headers": {
+                "X-Ghost-Cache-Status": ""
+            }
+        },
+        "GitLab": {
+            "cats": [
+                13,
+                47
+            ],
+            "headers": {
+                "Set-cookie": "_gitlab_session"
+            },
+            "implies": [
+                "Ruby",
+                "Ruby on Rails"
+            ]
+        },
+        "GlassFish": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "GlassFish(?: Server)?(?: Open Source Edition)?(?: ?/?([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Java"
+            ]
+        },
+        "GoAhead": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "GoAhead"
+            }
+        },
+        "Google Analytics": {
+            "cats": [
+                10
+            ],
+            "headers": {
+                "Set-Cookie": "__utma"
+            }
+        },
+        "Google App Engine": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Google Frontend"
+            }
+        },
+        "Google PageSpeed": {
+            "cats": [
+                23,
+                33
+            ],
+            "headers": {
+                "X-Mod-Pagespeed": "([\\d.]+)\\;version:\\1",
+                "X-Page-Speed": "(.+)\\;version:\\1"
+            }
+        },
+        "Google Web Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "gws"
+            }
+        },
+        "Graffiti CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "graffitibot[^;]="
+            }
+        },
+        "Grandstream": {
+            "cats": [
+                22,
+                39
+            ],
+            "headers": {
+                "Server": "Grandstream\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "HHVM": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "HHVM/?([\\d.]+)?\\;version:\\1"
+            },
+            "implies": "PHP\\;confidence:50"
+        },
+        "HP ChaiServer": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "HP-Chai(?:Server|SOE)(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "HP"
+            ]
+        },
+        "HP Compact Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "HP_Compact_Server(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "HP System Management": {
+            "cats": [
+                46
+            ],
+            "headers": {
+                "Server": "HP System Management"
+            }
+        },
+        "HP iLO": {
+            "cats": [
+                22,
+                46
+            ],
+            "headers": {
+                "Server": "HP-iLO-Server(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "HTTP Kit": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^http-kit"
+            },
+            "implies": "Java"
+        },
+        "HTTP-Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "(?:^|[^-])\bHTTP-Server(?: ?/?V?([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "HTTP/2": {
+            "cats": [
+                19
+            ],
+            "excludes": "SPDY",
+            "headers": {
+                "X-Firefox-Spdy": "h2"
+            }
+        },
+        "Happy ICS Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Happy ICS Server(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "OmniTouch 8660 My Teamwork"
+        },
+        "Hiawatha": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Hiawatha v([\\d.]+)\\;version:\\1"
+            }
+        },
+        "Hotaru CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "hotaru_mobile="
+            }
+        },
+        "Hybris": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "_hybris"
+            },
+            "implies": "Java"
+        },
+        "IBM HTTP Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "IBM_HTTP_Server(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "IBM Tivoli Storage Manager": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "TSM_HTTP(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "IBM WebSphere Portal": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "IBM-Web2-Location": "",
+                "Itx-Generated-Timestamp": ""
+            },
+            "implies": "Java",
+            "url": "/wps/"
+        },
+        "IIS": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "IIS(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Windows Server"
+        },
+        "ImpressCMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "ICMSession[^;]+=",
+                "X-Powered-By": "ImpressCMS"
+            },
+            "implies": "PHP"
+        },
+        "Incapsula": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "X-CDN": "Incapsula"
+            }
+        },
+        "Indico": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-cookie": "MAKACSESSION"
+            }
+        },
+        "Indy": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Indy(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "InstantCMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "InstantCMS\\[logdate\\]="
+            }
+        },
+        "Intel Active Management Technology": {
+            "cats": [
+                22,
+                46
+            ],
+            "headers": {
+                "Server": "Intel\\(R\\) Active Management Technology(?: ([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Invenio": {
+            "cats": [
+                50
+            ],
+            "headers": {
+                "Set-cookie": "INVENIOSESSION"
+            }
+        },
+        "JBoss Application Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "JBoss(?:-([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "JBoss Web": {
+            "cats": [
+                22
+            ],
+            "excludes": "Apache Tomcat",
+            "headers": {
+                "X-Powered-By": "JBossWeb(?:-([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "JBoss Application Server"
+        },
+        "JC-HTTPD": {
+            "cats": [
+                22
+            ],
+            "excludes": "Apache",
+            "headers": {
+                "Server": "JC-HTTPD(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Canon"
+            ]
+        },
+        "JTL Shop": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "JTLSHOP="
+            }
+        },
+        "Java": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Set-Cookie": "JSESSIONID"
+            }
+        },
+        "Java Servlet": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Servlet(?:.([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Java"
+        },
+        "JavaServer Faces": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "JSF(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Java"
+        },
+        "JavaServer Pages": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "JSP(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Java"
+        },
+        "Jenkins": {
+            "cats": [
+                44
+            ],
+            "headers": {
+                "X-Jenkins": "([\\d\\.]+)\\;version:\\1"
+            }
+        },
+        "Jetty": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Jetty(?:\\(([\\d\\.]*\\d+))?\\;version:\\1"
+            },
+            "implies": "Java"
+        },
+        "Joomla": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Content-Encoded-By": "Joomla! ([\\d.]+)\\;version:\\1"
+            },
+            "implies": "PHP",
+            "url": "option=com_"
+        },
+        "KS_HTTP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "KS_HTTP\\/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Canon"
+        },
+        "Kampyle": {
+            "cats": [
+                10,
+                13
+            ],
+            "headers": {
+                "Set-Cookie": "k_visit"
+            }
+        },
+        "Kentico CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "CMSPreferredCulture="
+            }
+        },
+        "Koa": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "^koa$"
+            },
+            "implies": "Node.js"
+        },
+        "Kohana": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "kohanasession",
+                "X-Powered-By": "Kohana Framework ([\\d.]+)\\;version:\\1"
+            },
+            "implies": "PHP"
+        },
+        "Koken": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "koken_referrer="
+            },
+            "implies": [
+                "PHP",
+                "MySQL"
+            ]
+        },
+        "Kolibri CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "Kolibri"
+            }
+        },
+        "Kooboo CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-KoobooCMS-Version": "(.*)\\;version:\\1"
+            },
+            "implies": "Microsoft ASP.NET"
+        },
+        "LEPTON": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "lep\\d+sessionid="
+            },
+            "implies": "PHP"
+        },
+        "LabVIEW": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "LabVIEW(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+        },
+        "Laravel": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "laravel_session"
+            },
+            "implies": "PHP"
+        },
+        "Liferay": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Liferay-Portal": "[a-z\\s]+([\\d.]+)\\;version:\\1"
+            }
+        },
+        "Lift": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Lift-Version": "(.+)\\;version:\\1"
+            },
+            "implies": "Scala"
+        },
+        "LightMon Engine": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "lm_online"
+            },
+            "implies": [
+                "PHP"
+            ]
+        },
+        "Lighty": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "lighty_version"
+            },
+            "implies": "PHP"
+        },
+        "LimeSurvey": {
+            "cats": [
+                19
+            ],
+            "headers": {
+                "generator": "LimeSurvey"
+            }
+        },
+        "LiteSpeed": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^LiteSpeed$"
+            }
+        },
+        "Lithium": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "LithiumVisitor="
+            },
+            "implies": "PHP"
+        },
+        "LiveStreet CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "LiveStreet CMS"
+            }
+        },
+        "Logitech Media Server": {
+            "cats": [
+                22,
+                38
+            ],
+            "headers": {
+                "Server": "Logitech Media Server(?: \\(([\\d\\.]+))?\\;version:\\1"
+            }
+        },
+        "Lotus Domino": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Lotus-Domino"
+            }
+        },
+        "Lua": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "X-Powered-By": "\bLua(?: ([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "M.R. Inc SiteFrame": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Powered-By": "M\\.R\\. Inc SiteFrame"
+            }
+        },
+        "M.R. Inc Webserver": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "M\\.R\\. Inc Webserver"
+            },
+            "implies": [
+                "M.R. Inc BoxyOS"
+            ]
+        },
+        "MODX": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "SN5[a-f\\d]{12}",
+                "X-Powered-By": "^MODX"
+            },
+            "implies": "PHP"
+        },
+        "Magento": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "frontend=\\;confidence:50"
+            },
+            "implies": "PHP"
+        },
+        "MaxCDN": {
+            "cats": [
+                31
+            ],
+            "headers": {
+                "Server": "NetDNA"
+            }
+        },
+        "Mean.io": {
+            "cats": [
+                12
+            ],
+            "headers": {
+                "X-Powered-CMS": "Mean\\.io"
+            },
+            "implies": [
+                "MongoDB",
+                "Express",
+                "AngularJS",
+                "Node.js"
+            ]
+        },
+        "MediaTomb": {
+            "cats": [
+                38
+            ],
+            "headers": {
+                "Server": "MediaTomb(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Microsoft ASP.NET": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "ASPSESSION|ASP\\.NET_SessionId",
+                "X-AspNet-Version": "(.+)\\;version:\\1",
+                "X-Powered-By": "ASP\\.NET\\;confidence:50"
+            },
+            "implies": "IIS\\;confidence:50",
+            "url": "\\.aspx(?:$|\\?)"
+        },
+        "Microsoft HTTPAPI": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Microsoft-HTTPAPI(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Microsoft SharePoint": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "MicrosoftSharePointTeamServices": "(.*)\\;version:\\1",
+                "SPRequestGuid": "",
+                "SharePointHealthScore": "",
+                "X-SharePointHealthScore": ""
+            }
+        },
+        "MiniServ": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "MiniServ\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "MochiWeb": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "MochiWeb(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Mojolicious": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "x-powered-by": "mojolicious"
+            },
+            "implies": "Perl"
+        },
+        "Mongrel": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Mongrel"
+            },
+            "implies": "Ruby"
+        },
+        "Monkey HTTP Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Monkey/?([\\d.]+)?\\;version:\\1"
+            }
+        },
+        "Mono": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Mono"
+            }
+        },
+        "Moodle": {
+            "cats": [
+                21
+            ],
+            "headers": {
+                "Set-Cookie": "MoodleSession"
+            },
+            "implies": "PHP"
+        },
+        "Motion-httpd": {
+            "cats": [
+                22
+            ],
+            "excludes": "Apache",
+            "headers": {
+                "Server": "Motion-httpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Moxa": {
+            "cats": [
+                37
+            ],
+            "headers": {
+                "Server": "MoxaHttp(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Neos CMS": {
+            "cats": [
+                1
+            ],
+            "excludes": "TYPO3 CMS",
+            "headers": {
+                "X-Flow-Powered": "Neos/?(.+)?$\\;version:\\1"
+            },
+            "implies": [
+                "PHP",
+                "Neos Flow"
+            ],
+            "url": "/neos/"
+        },
+        "Neos Flow": {
+            "cats": [
+                18
+            ],
+            "excludes": "TYPO3 CMS",
+            "headers": {
+                "X-Flow-Powered": "Flow/?(.+)?$\\;version:\\1"
+            },
+            "implies": "PHP"
+        },
+        "Nepso": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-CMS": "Nepso"
+            },
+            "implies": [
+                "Python",
+                "Perl",
+                "Java",
+                "PHP"
+            ]
+        },
+        "Netsuite": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "NS_VER="
+            }
+        },
+        "Nette Framework": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Nette Framework"
+            },
+            "implies": "PHP"
+        },
+        "Nginx": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "nginx(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "October CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "october_session="
+            },
+            "implies": "Laravel"
+        },
+        "Open Journal Systems": {
+            "cats": [
+                50
+            ],
+            "headers": {
+                "Set-Cookie": "\bOJSSID\b"
+            },
+            "implies": [
+                "PHP"
+            ]
+        },
+        "OpenCms": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Server": "OpenCms"
+            },
+            "implies": "Java"
+        },
+        "OpenGSE": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "GSE"
+            },
+            "implies": "Java"
+        },
+        "OpenGrok": {
+            "cats": [
+                19
+            ],
+            "headers": {
+                "Set-Cookie": "OpenGrok"
+            },
+            "implies": "Java"
+        },
+        "OpenNemas": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "OpenNemas"
+            }
+        },
+        "OpenResty": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "openresty(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Nginx",
+                "Lua"
+            ]
+        },
+        "OpenSSL": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "OpenSSL(?:/([\\d.]+[a-z]?))?\\;version:\\1"
+            }
+        },
+        "Ophal": {
+            "cats": [
+                1,
+                11,
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "Ophal(?: (.*))? \\(ophal\\.org\\)\\;version:\\1"
+            },
+            "implies": "Lua"
+        },
+        "Oracle Application Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Oracle[- ]Application[- ]Server(?: Containers for J2EE)?(?:[- ](\\d[\\da-z./]+))?\\;version:\\1"
+            }
+        },
+        "Oracle Commerce": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-ATG-Version": "(?:ATGPlatform/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Oracle Commerce Cloud": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "OracleCommerceCloud-Version": "(.*)\\;version:\\1"
+            }
+        },
+        "Oracle Dynamic Monitoring Service": {
+            "cats": [
+                19
+            ],
+            "headers": {
+                "x-oracle-dms-ecid": ""
+            }
+        },
+        "Oracle HTTP Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Oracle-HTTP-Server(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Oracle Web Cache": {
+            "cats": [
+                23
+            ],
+            "headers": {
+                "Server": "Oracle(?:AS)?[- ]Web[- ]Cache(?:[- /]([\\da-z./]+))?\\;version:\\1"
+            }
+        },
+        "PHP": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Server": "php/?([\\d.]+)?\\;confidence:40\\;version:\\1",
+                "Set-Cookie": "PHPSESSID",
+                "X-Powered-By": "php/?([\\d.]+)?\\;confidence:40\\;version:\\1"
+            },
+            "url": "\\.php(?:$|\\?)"
+        },
+        "PencilBlue": {
+            "cats": [
+                1,
+                11
+            ],
+            "headers": {
+                "X-Powered-By": "PencilBlue"
+            }
+        },
+        "PerfSONAR-PS": {
+            "cats": [
+                19
+            ],
+            "headers": {
+                "User-agent": "perfSONAR-PS/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Perl": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Server": "\bPerl\b(?: ?/?v?([\\d.]+))?\\;version:\\1"
+            },
+            "url": "\\.pl(?:$|\\?)"
+        },
+        "Phusion Passenger": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "^Phusion Passenger"
+            }
+        },
+        "Piano Solo": {
+            "cats": [
+                43
+            ],
+            "headers": {
+                "Set-Cookie": "pianovisitkey"
+            }
+        },
+        "Pimcore": {
+            "cats": [
+                1,
+                6,
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "pimcore"
+            },
+            "implies": [
+                "PHP"
+            ]
+        },
+        "Piwik": {
+            "cats": [
+                10
+            ],
+            "headers": {
+                "Set-Cookie": "PIWIK_SESSID="
+            }
+        },
+        "Plesk": {
+            "cats": [
+                9
+            ],
+            "headers": {
+                "X-Powered-By": "PleskLin",
+                "X-Powered-By-Plesk": "Plesk"
+            }
+        },
+        "Public CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "PUBLICCMS_USER",
+                "X-Powered-PublicCMS": ""
+            },
+            "implies": "Java"
+        },
+        "PyroCMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "pyrocms",
+                "X-Streams-Distribution": "PyroCMS"
+            },
+            "implies": "Laravel"
+        },
+        "Python": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Server": "(?:^|\\s)Python(?:/([\\d.]+))?\\;confidence:50\\;version:\\1"
+            }
+        },
+        "RAID HTTPServer": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "RAID HTTPServer(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "RackCache": {
+            "cats": [
+                23
+            ],
+            "headers": {
+                "X-Rack-Cache": ""
+            },
+            "implies": "Ruby"
+        },
+        "RainLoop": {
+            "cats": [
+                30
+            ],
+            "headers": {
+                "Server": "RainLoop"
+            },
+            "implies": "PHP"
+        },
+        "Rapid Logic": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Rapid Logic(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Red Hat": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Red Hat",
+                "X-Powered-By": "Red Hat"
+            }
+        },
+        "Resin": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^Resin(?:/(\\S*))?\\;version:\\1"
+            },
+            "implies": "Java"
+        },
+        "Ruby": {
+            "cats": [
+                27
+            ],
+            "headers": {
+                "Server": "(?:Mongrel|WEBrick|Ruby)"
+            }
+        },
+        "Ruby on Rails": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Server": "(?:mod_rails|mod_rack|Phusion(?:\\.|_)Passenger)\\;confidence:50",
+                "X-Powered-By": "(?:mod_rails|mod_rack|Phusion[\\._ ]Passenger)(?: \\(mod_rails/mod_rack\\))?(?: ?/?([\\d\\.]+))?\\;version:\\1\\;confidence:50"
+            },
+            "implies": "Ruby"
+        },
+        "SAP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "SAP NetWeaver Application Server"
+            }
+        },
+        "SPDY": {
+            "cats": [
+                19
+            ],
+            "excludes": "HTTP/2",
+            "headers": {
+                "X-Firefox-Spdy": "\\d\\.\\d"
+            }
+        },
+        "SPIP": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Spip-Cache": ""
+            }
+        },
+        "SUSE": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "SUSE(?:/?\\s?-?([\\d.]+))?\\;version:\\1",
+                "X-Powered-By": "SUSE(?:/?\\s?-?([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Saia PCD": {
+            "cats": [
+                45
+            ],
+            "headers": {
+                "Server": "Saia PCD(?:([/a-z\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Sails.js": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "^sails\\.sid$",
+                "X-Powered-By": "^Sails$"
+            },
+            "implies": [
+                "Node.js",
+                "Express"
+            ]
+        },
+        "Schneider Web Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Schneider-WEB(?:/V?([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Schneider"
+            ]
+        },
+        "Scientific Linux": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Scientific Linux",
+                "X-Powered-By": "Scientific Linux"
+            }
+        },
+        "Sentinel Keys Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "SentinelKeysServer\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Sentinel Protection Server": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "SentinelProtectionServer\\/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Shadow": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "ShadowFramework"
+            },
+            "implies": "PHP"
+        },
+        "Shopery": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-Shopery": ""
+            },
+            "implies": [
+                "PHP",
+                "Symfony",
+                "Elcodi"
+            ]
+        },
+        "Silva": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "SilvaCMS"
+            }
+        },
+        "SimpleHTTP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "SimpleHTTP(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Sitecore": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-cookie": "SC_ANALYTICS_GLOBAL_COOKIE"
+            }
+        },
+        "Snap": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Server": "Snap/([.\\d]+)\\;version:\\1"
+            },
+            "implies": "Haskell"
+        },
+        "Solodev": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "solodev_session": ""
+            },
+            "implies": "PHP"
+        },
+        "Splunkd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Splunkd"
+            }
+        },
+        "Squarespace": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-ServedBy": "squarespace"
+            }
+        },
+        "Squiz Matrix": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "Squiz Matrix"
+            },
+            "implies": "PHP"
+        },
+        "Stamplay": {
+            "cats": [
+                34,
+                47
+            ],
+            "headers": {
+                "Server": "Stamplay"
+            }
+        },
+        "Starlet": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^Plack::Handler::Starlet"
+            },
+            "implies": "Perl"
+        },
+        "Subrion": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-CMS": "Subrion CMS"
+            },
+            "implies": "PHP"
+        },
+        "Sulu": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Generator": "Sulu/?(.+)?$\\;version:\\1"
+            },
+            "implies": [
+                "PHP",
+                "Symfony"
+            ]
+        },
+        "SunOS": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "SunOS( [\\d\\.]+)?\\;version:\\1",
+                "Servlet-engine": "SunOS( [\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Swiftlet": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Generator": "Swiftlet",
+                "X-Powered-By": "Swiftlet",
+                "X-Swiftlet-Cache": ""
+            },
+            "implies": "PHP"
+        },
+        "TWiki": {
+            "cats": [
+                8
+            ],
+            "headers": {
+                "Set-cookie": "TWIKISID"
+            }
+        },
+        "Tengine": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Tengine"
+            }
+        },
+        "ThinkPHP": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "ThinkPHP"
+            },
+            "implies": "PHP"
+        },
+        "TornadoServer": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "TornadoServer(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Tumblr": {
+            "cats": [
+                11
+            ],
+            "headers": {
+                "X-Tumblr-User": ""
+            },
+            "url": "^https?://(?:www\\.)?[^/]+\\.tumblr\\.com/"
+        },
+        "Twilight CMS": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-CMS": "Twilight CMS"
+            }
+        },
+        "TwistPHP": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "TwistPHP"
+            },
+            "implies": "PHP"
+        },
+        "TwistedWeb": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "TwistedWeb(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "UNIX": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Unix"
+            }
+        },
+        "Ubuntu": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Ubuntu",
+                "X-Powered-By": "Ubuntu"
+            }
+        },
+        "Umbraco": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Umbraco-Version": "(.*)\\;version:\\1"
+            },
+            "implies": "Microsoft ASP.NET",
+            "url": "/umbraco/login\\.aspx(?:$|\\?)"
+        },
+        "Unbounce": {
+            "cats": [
+                20,
+                51
+            ],
+            "headers": {
+                "X-Unbounce-PageId": ""
+            }
+        },
+        "Ushahidi": {
+            "cats": [
+                1,
+                35
+            ],
+            "headers": {
+                "Set-Cookie": "^ushahidi="
+            },
+            "implies": [
+                "PHP",
+                "MySQL",
+                "OpenLayers"
+            ]
+        },
+        "VIVVO": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "VivvoSessionId"
+            }
+        },
+        "VTEX Enterprise": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "powered": "vtex"
+            }
+        },
+        "VTEX Integrated Store": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-Powered-By": "vtex-integrated-store"
+            }
+        },
+        "Vanilla": {
+            "cats": [
+                2
+            ],
+            "headers": {
+                "X-Powered-By": "Vanilla"
+            },
+            "implies": "PHP"
+        },
+        "Varnish": {
+            "cats": [
+                23
+            ],
+            "headers": {
+                "Via": ".*Varnish",
+                "X-Varnish": "",
+                "X-Varnish-Action": "",
+                "X-Varnish-Age": "",
+                "X-Varnish-Cache": "",
+                "X-Varnish-Hostname": ""
+            }
+        },
+        "Venda": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-venda-hitid": ""
+            }
+        },
+        "Virata EmWeb": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Virata-EmWeb(?:/(R?[\\d._]+))?\\;version:\\1"
+            },
+            "implies": [
+                "HP"
+            ]
+        },
+        "W3 Total Cache": {
+            "cats": [
+                23
+            ],
+            "headers": {
+                "X-Powered-By": "W3 Total Cache(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "WordPress"
+        },
+        "WHMCS": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "^WHMCS.*"
+            }
+        },
+        "WP Rocket": {
+            "cats": [
+                23
+            ],
+            "headers": {
+                "X-Powered-By": "WP Rocket(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "WordPress"
+        },
+        "Warp": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^Warp/(\\d+(?:\\.\\d+)+)?$\\;version:\\1"
+            },
+            "implies": "Haskell"
+        },
+        "Web2py": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "web2py"
+            },
+            "implies": [
+                "Python",
+                "jQuery"
+            ]
+        },
+        "WebGUI": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "^wgSession="
+            },
+            "implies": "Perl"
+        },
+        "Webs": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Server": "Webs\\.com/?([\\d\\.]+)?\\;version:\\1"
+            }
+        },
+        "Windows CE": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "\bWinCE\b"
+            }
+        },
+        "Windows Server": {
+            "cats": [
+                28
+            ],
+            "headers": {
+                "Server": "Win32|Win64"
+            }
+        },
+        "Winstone Servlet Container": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Winstone Servlet (?:Container|Engine) v?([\\d.]+)?\\;version:\\1",
+                "X-Powered-By": "Winstone(?:.([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Wix": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "Domain=\\.wix\\.com",
+                "X-Wix-Dispatcher-Cache-Hit": ""
+            }
+        },
+        "X-Cart": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "xid=[a-z\\d]{32}(?:;|$)"
+            },
+            "implies": "PHP"
+        },
+        "Xitami": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Xitami(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "Yahoo! Ecommerce": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "X-XRDS-Location": "/ystore/"
+            }
+        },
+        "Yaws": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "Yaws(?: ([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Erlang"
+            ]
+        },
+        "Zend": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Set-Cookie": "ZENDSERVERSESSID",
+                "X-Powered-By": "Zend"
+            }
+        },
+        "Zope": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "^Zope/"
+            }
+        },
+        "actionhero.js": {
+            "cats": [
+                1,
+                18,
+                22
+            ],
+            "headers": {
+                "X-Powered-By": "actionhero API"
+            },
+            "implies": "Node.js"
+        },
+        "cPanel": {
+            "cats": [
+                9
+            ],
+            "headers": {
+                "Server": "cpsrvd/([\\d.]+)\\;version:\\1"
+            }
+        },
+        "debut": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "debut\\/?([\\d\\.]+)?\\;version:\\1"
+            },
+            "implies": "Brother"
+        },
+        "dwhttpd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "dwhttpd\\/?([\\d\\.a-z]+)?\\;version:\\1"
+            }
+        },
+        "e107": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "Set-Cookie": "e107_tz[^;]+=",
+                "X-Powered-By": "e107"
+            },
+            "implies": "PHP"
+        },
+        "eDevice SmartStack": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "eDevice SmartStack(?: ?/?([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "eHTTP": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "\beHTTP(?: v?([\\d\\.]+))?\\;version:\\1"
+            },
+            "implies": "HP ProCurve"
+        },
+        "eSyndiCat": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Drectory-Script": "^eSyndiCat"
+            },
+            "implies": "PHP"
+        },
+        "eZ Publish": {
+            "cats": [
+                1,
+                6
+            ],
+            "headers": {
+                "X-Powered-By": "^eZ Publish"
+            },
+            "implies": "PHP"
+        },
+        "enduro.js": {
+            "cats": [
+                1,
+                18,
+                47
+            ],
+            "headers": {
+                "X-Powered-By": "^enduro.js$"
+            },
+            "implies": "Node.js"
+        },
+        "gunicorn": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "gunicorn(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Python"
+            ]
+        },
+        "hapi.js": {
+            "cats": [
+                18,
+                22
+            ],
+            "headers": {
+                "Set-Cookie": "Fe26\\.2\\*\\*\\;confidence:50"
+            },
+            "implies": "Node.js"
+        },
+        "libwww-perl-daemon": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "libwww-perl-daemon(?:/([\\d\\.]+))?\\;version:\\1"
+            },
+            "implies": "Perl"
+        },
+        "lighttpd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "lighttpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "mini_httpd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "mini_httpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "mod_auth_pam": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_auth_pam(?:/([\\d\\.]+))?\\;version:\\1"
+            },
+            "implies": "Apache"
+        },
+        "mod_dav": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "\b(?:mod_)?DAV\b(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Apache"
+        },
+        "mod_fastcgi": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_fastcgi(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Apache"
+        },
+        "mod_jk": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_jk(?:/([\\d\\.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Apache Tomcat",
+                "Apache"
+            ]
+        },
+        "mod_perl": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_perl(?:/([\\d\\.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Perl",
+                "Apache"
+            ]
+        },
+        "mod_python": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_python(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Python",
+                "Apache"
+            ]
+        },
+        "mod_rack": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_rack(?:/([\\d.]+))?\\;version:\\1",
+                "X-Powered-By": "mod_rack(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Ruby on Rails\\;confidence:50",
+                "Apache"
+            ]
+        },
+        "mod_rails": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_rails(?:/([\\d.]+))?\\;version:\\1",
+                "X-Powered-By": "mod_rails(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Ruby on Rails\\;confidence:50",
+                "Apache"
+            ]
+        },
+        "mod_ssl": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_ssl(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": "Apache"
+        },
+        "mod_wsgi": {
+            "cats": [
+                33
+            ],
+            "headers": {
+                "Server": "mod_wsgi(?:/([\\d.]+))?\\;version:\\1",
+                "X-Powered-By": "mod_wsgi(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "implies": [
+                "Python\\;confidence:50",
+                "Apache"
+            ]
+        },
+        "osCommerce": {
+            "cats": [
+                6
+            ],
+            "headers": {
+                "Set-Cookie": "osCsid="
+            }
+        },
+        "osTicket": {
+            "cats": [
+                13
+            ],
+            "headers": {
+                "Set-Cookie": "OSTSESSID"
+            },
+            "implies": [
+                "PHP",
+                "MySQL"
+            ]
+        },
+        "phpBB": {
+            "cats": [
+                2
+            ],
+            "headers": {
+                "Set-Cookie": "^phpbb"
+            },
+            "implies": "PHP"
+        },
+        "swift.engine": {
+            "cats": [
+                1
+            ],
+            "headers": {
+                "X-Powered-By": "swift\\.engine"
+            }
+        },
+        "thttpd": {
+            "cats": [
+                22
+            ],
+            "headers": {
+                "Server": "\bthttpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+        },
+        "total.js": {
+            "cats": [
+                18
+            ],
+            "headers": {
+                "X-Powered-By": "^total\\.js"
+            },
+            "implies": "Node.js"
+        },
+        "uCore": {
+            "cats": [
+                1,
+                18
+            ],
+            "headers": {
+                "Set-Cookie": "ucore"
+            },
+            "implies": "PHP"
+        },
+        "uKnowva": {
+            "cats": [
+                1,
+                2,
+                18,
+                50
+            ],
+            "headers": {
+                "X-Content-Encoded-By": "uKnowva ([\\d.]+)\\;version:\\1"
+            },
+            "implies": "PHP"
+        }
+    },
+    "categories": {
+        "1": "CMS",
+        "2": "Message Boards",
+        "6": "Ecommerce",
+        "8": "Wikis",
+        "9": "Hosting Panels",
+        "10": "Analytics",
+        "11": "Blogs",
+        "12": "Javascript Frameworks",
+        "13": "Issue Trackers",
+        "18": "Web Frameworks",
+        "19": "Miscellaneous",
+        "20": "Editors",
+        "21": "LMS",
+        "22": "Web Servers",
+        "23": "Cache Tools",
+        "27": "Programming Languages",
+        "28": "Operating Systems",
+        "30": "Web Mail",
+        "31": "CDN",
+        "33": "Web Server Extensions",
+        "34": "Databases",
+        "35": "Maps",
+        "37": "Network Devices",
+        "38": "Media Servers",
+        "39": "Webcams",
+        "43": "Paywalls",
+        "44": "Build CI Systems",
+        "45": "Control Systems",
+        "46": "Remote Access",
+        "47": "Dev Tools",
+        "50": "Document Management Systems",
+        "51": "Landing Page Builders"
+    }
+}
